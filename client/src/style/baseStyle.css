@@ -1,0 +1,45 @@
+body {
+
+    background-color: #cb4042;
+    color: #fff;
+    font-family: 'Bitter', serif;
+
+}
+
+.custom-btn {
+    background-color: #006400;
+    color: #ffffff;
+
+}
+.custom-btn:hover {
+    background-color: #2e8b57;
+    color: #ffffff;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.task-list {
+    width: 80%;
+    max-width: 400px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+
+}
+.task-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+#add-task-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+}
