@@ -30,7 +30,11 @@ const tasks = ref([]);
 onMounted(async () => {
   try {
     const userId = JSON.parse(sessionStorage.getItem('user'))?.email;
-    const res = await axios.post('http://localhost:3000/api/tasksDone', {userId});
+    const res = await axios.get('http://localhost:3000/api/tasksDone', {
+      params: {
+        userId: userId
+      }
+    });
     tasks.value = res.data;
   } catch (err) {
     console.log("error", err.response.data.message);

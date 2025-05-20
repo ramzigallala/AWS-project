@@ -1,10 +1,9 @@
 const express = require('express');
 const controllerTask = require('../controller/taskController');
 const router = express.Router();
-// @route   POST /api/tasksDone
-router.post('/tasksDone', async (req, res) => {
-    const { userId } = req.body;
-
+// @route   GET /api/tasksDone
+router.get('/tasksDone', async (req, res) => {
+    const userId = req.query.userId;
     try {
         const userTasks = await controllerTask.takesTasksDone(userId);
         if (!userTasks) {
